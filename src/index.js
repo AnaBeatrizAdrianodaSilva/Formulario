@@ -15,7 +15,9 @@ export default function RootNavigation() {
       <Tab.Navigator
         initialRouteName="Feed"
         activeColor="#7113B7"
-        barStyle={{ backgroundColor: '#46936F' }}
+        barStyle={{ backgroundColor: '#46936F', }}
+        labeled={false}
+        shifting={true}
       >
 
         <Tab.Screen
@@ -31,23 +33,24 @@ export default function RootNavigation() {
 
         <Tab.Screen
           name="CadastroScreen"
-          component={CadastroScreen} 
+          component={CadastroScreen}
           options={{
             tabBarLabel: 'Cadastro',
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name='account-plus' color={color} size={26} /> 
+              <MaterialCommunityIcons name='account-plus' color={color} size={26} />
             )
           }}
         />
 
-        <Tab.Screen 
-          name="LoginScreen" 
-          component={LoginScreen} 
+        <Tab.Screen
+          name="LoginScreen"
+          component={LoginScreen}
           options={{
-            tabBarLabel: 'Cadastro',
+            tabBarLabel: 'Login',
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name='account' color={color} size={26} /> 
-            )
+              <MaterialCommunityIcons name='account' color={color} size={26} />
+            ),
+            tabBarColor: "black",
           }}
         />
       </Tab.Navigator>
