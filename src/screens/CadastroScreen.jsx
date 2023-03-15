@@ -3,36 +3,39 @@ import { Text } from "react-native-paper";
 
 export default function CadastroScreen() {
   return (
-    <View style={styles.body}>
+    <View>
+      <View style={styles.header}></View>
 
-      <Text style={styles.title}>Cadastro</Text>
-
-      <View style={styles.form}>
-        <Text style={styles.label}>Nome Completo:</Text>
-        <TextInput style={styles.input} />
-
-        <Text style={styles.label}>Nome de Usuário:</Text>
-        <TextInput style={styles.input} />
-
-        <Text style={styles.label}>Email:</Text>
-        <TextInput style={styles.input} />
-
-        <Text style={styles.label}>Senha:</Text>
-        <TextInput style={styles.input} secureTextEntry={true} />
-
-        <Text style={styles.label}>Confirmação de Senha:</Text>
-        <TextInput style={styles.input} secureTextEntry={true} />
-
+      <View style={styles.main}>
+        <Text style={styles.title}>Cadastro</Text>
+  
+        <View style={styles.form}>
+          <Text style={styles.label}>Nome Completo:</Text>
+          <TextInput style={styles.input} />
+  
+          <Text style={styles.label}>Nome de Usuário:</Text>
+          <TextInput style={styles.input} />
+  
+          <Text style={styles.label}>Email:</Text>
+          <TextInput style={styles.input} />
+  
+          <Text style={styles.label}>Senha:</Text>
+          <TextInput style={styles.input} secureTextEntry={true} />
+  
+          <Text style={styles.label}>Confirmação de Senha:</Text>
+          <TextInput style={styles.input} secureTextEntry={true} />
+        </View>
       </View>
     </View>
-  )
+  );
 }
 
-const styles = StyleSheet.create ({
-  body: {
-    alignItems: 'center',
-    justifyContent: 'center',
+const styles = StyleSheet.create({
+  main: {
+    alignItems: "center",
+    justifyContent: "center",
     flex: 1,
+    marginTop: 40,
   },
 
   title: {
@@ -41,15 +44,15 @@ const styles = StyleSheet.create ({
   },
 
   form: {
-    backgroundColor: '#214D51',
+    backgroundColor: "#214D51",
     padding: 25,
     borderRadius: 10,
   },
 
   label: {
-    color: 'white',
+    color: "white",
     marginBottom: 5,
-  },  
+  },
 
   input: {
     borderColor: "gray",
@@ -57,7 +60,13 @@ const styles = StyleSheet.create ({
     borderWidth: 1,
     borderRadius: 10,
     marginBottom: 10,
-    color: 'white',
+    color: "white",
     paddingLeft: 10,
-  }
-})
+  },
+
+  header: {
+    backgroundColor: "#46936F",
+    width: "100%",
+    height: 80,
+  },
+});
